@@ -20,7 +20,7 @@ export default function Input({
           hasErrors
             ? "border-red-500 focus-within:outline-red-400"
             : "border-gray-300 focus-within:outline-gray-300"
-        } rounded-full p-3 w-80 bg-gray-100 text-sm outline-none focus-within:outline-double focus-within:outline-2`}
+        } rounded-full p-3 bg-gray-100 text-sm outline-none focus-within:outline-double focus-within:outline-2`}
       >
         {icon && <span className="text-gray-500">{icon}</span>}
         <input

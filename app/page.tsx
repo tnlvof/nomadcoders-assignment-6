@@ -12,14 +12,14 @@ export default function LogIn() {
   return (
     <main className="flex min-h-screen flex-col items-center space-y-10 p-24 bg-gray-100">
       <p className="text-4xl">🔥</p>
-      <form className="flex flex-col space-y-3" action={dispatch}>
+      <form className="flex flex-col space-y-3 min-w-96" action={dispatch}>
         <Input
           icon={<EnvelopeIcon className="size-4" />}
           name="email"
           type="email"
           required={true}
           placeholder="Email"
-          errors={[]}
+          errors={state?.fieldErrors?.email || []}
         />
         <Input
           icon={<UserIcon className="size-4" />}
@@ -27,7 +27,7 @@ export default function LogIn() {
           type="text"
           required={true}
           placeholder="Username"
-          errors={[]}
+          errors={state?.fieldErrors?.username || []}
         />
         <Input
           icon={<KeyIcon className="size-4" />}
